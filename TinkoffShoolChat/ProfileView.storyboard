@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qVT-Rw-Vvv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="i19-Am-CKn">
+            <objects>
+                <viewController id="qVT-Rw-Vvv" customClass="ProfileViewController" customModule="TinkoffShoolChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFv-nA-Pbt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-Ia-dPF">
+                                <rect key="frame" x="20" y="40" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9HY-Ia-dPF" secondAttribute="height" multiplier="1:1" id="A5m-3c-AFA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9HY-Ia-dPF" firstAttribute="leading" secondItem="9wB-FN-yP3" secondAttribute="leading" constant="20" id="EEy-om-Oy6"/>
+                            <constraint firstItem="9HY-Ia-dPF" firstAttribute="top" secondItem="9wB-FN-yP3" secondAttribute="top" constant="20" id="I0O-oi-iKl"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" constant="20" id="k5l-9E-mRM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9wB-FN-yP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="userPlaceholder" destination="9HY-Ia-dPF" id="CnR-dG-PfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTr-NE-Az7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="152.47376311844079"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UserPlaceholder" width="300" height="300"/>
+    </resources>
+</document>
