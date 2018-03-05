@@ -21,27 +21,27 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("Application is running function: \(#function)")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("Application is running function: \(#function)")
+        
     }
     
     override func viewWillLayoutSubviews() {
-        print("Application is running function: \(#function)")
+        
     }
     
     override func viewDidLayoutSubviews() {
-        print("Application is running function: \(#function)")
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("Application is running function: \(#function)")
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("Application is running function: \(#function)")
+        
     }
 }
 
