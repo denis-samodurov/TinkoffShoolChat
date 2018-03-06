@@ -15,6 +15,7 @@
 		AA2D8BE6204225F900DE9A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2D8BE4204225F900DE9A03 /* LaunchScreen.storyboard */; };
 		AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB6674204DE98D00174C01 /* ProfileViewController.swift */; };
 		AACB6677204DEA7F00174C01 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB6676204DEA7F00174C01 /* ProfileView.storyboard */; };
+		AACB6679204ECC4F00174C01 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AACB6678204ECC4F00174C01 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AA2D8BE7204225F900DE9A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACB6674204DE98D00174C01 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AACB6676204DEA7F00174C01 /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
+		AACB6678204ECC4F00174C01 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		AA2D8BCC204225F900DE9A03 = {
 			isa = PBXGroup;
 			children = (
+				AACB6678204ECC4F00174C01 /* Default-568h@2x.png */,
 				AA2D8BD7204225F900DE9A03 /* TinkoffShoolChat */,
 				AA2D8BD6204225F900DE9A03 /* Products */,
 			);
@@ -135,6 +138,7 @@
 				AA2D8BE6204225F900DE9A03 /* LaunchScreen.storyboard in Resources */,
 				AACB6677204DEA7F00174C01 /* ProfileView.storyboard in Resources */,
 				AA2D8BE3204225F900DE9A03 /* Assets.xcassets in Resources */,
+				AACB6679204ECC4F00174C01 /* Default-568h@2x.png in Resources */,
 				AA2D8BDE204225F900DE9A03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
