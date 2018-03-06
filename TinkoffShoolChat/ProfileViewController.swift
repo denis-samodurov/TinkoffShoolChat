@@ -10,11 +10,17 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var userPlaceholder: UIImageView!
+    @IBOutlet weak var cameraIcon: UIButton!
+    
+    private var cornerSize: CGFloat = 0.0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        cornerSize = cameraIcon.frame.size.height / 2;
+        print(cornerSize)
         setRadius(view: userPlaceholder);
+        setRadius(view: cameraIcon);
         
     }
     
@@ -24,7 +30,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func setRadius(view: UIView){
-        view.layer.cornerRadius = 50;
+        view.layer.cornerRadius = cornerSize;
         view.layer.masksToBounds = true;
+    }
+    
+    @IBAction func touchUpCameraIcon(_ sender: UIButton) {
+        print("Выбери изображение профиля")
     }
 }
