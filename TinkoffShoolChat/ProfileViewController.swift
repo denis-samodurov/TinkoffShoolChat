@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     @IBOutlet weak var userPlaceholder: UIImageView!
     @IBOutlet weak var cameraIcon: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
     private var cornerSize: CGFloat = 0.0;
     

@@ -32,24 +32,48 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Me9-2t-YOZ" secondAttribute="height" multiplier="1:1" id="2eB-fR-Nhp"/>
                                 </constraints>
+                                <state key="normal" image="CameraIcon"/>
                                 <connections>
                                     <action selector="touchUpCameraIcon:" destination="qVT-Rw-Vvv" eventType="touchUpInside" id="mxl-Ez-iPh"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-eV-usU">
+                                <rect key="frame" x="20" y="498" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="f1F-SF-vGZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Редактировать">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Me9-2t-YOZ" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" id="05N-5e-rTH"/>
+                            <constraint firstItem="tU7-eV-usU" firstAttribute="leading" secondItem="9wB-FN-yP3" secondAttribute="leading" constant="20" id="3jM-H0-8qb"/>
                             <constraint firstItem="Me9-2t-YOZ" firstAttribute="bottom" secondItem="9HY-Ia-dPF" secondAttribute="bottom" id="9xz-qb-Xw7"/>
                             <constraint firstItem="9HY-Ia-dPF" firstAttribute="leading" secondItem="9wB-FN-yP3" secondAttribute="leading" constant="20" id="EEy-om-Oy6"/>
                             <constraint firstItem="9HY-Ia-dPF" firstAttribute="top" secondItem="9wB-FN-yP3" secondAttribute="top" constant="20" id="I0O-oi-iKl"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="trailing" secondItem="tU7-eV-usU" secondAttribute="trailing" constant="20" id="cNg-ZM-GAE"/>
                             <constraint firstItem="Me9-2t-YOZ" firstAttribute="width" secondItem="9HY-Ia-dPF" secondAttribute="width" multiplier="0.3" id="eUj-VA-8Yq"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="bottom" secondItem="tU7-eV-usU" secondAttribute="bottom" constant="20" id="iB0-sO-kZo"/>
                             <constraint firstItem="9wB-FN-yP3" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" constant="20" id="k5l-9E-mRM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9wB-FN-yP3"/>
                     </view>
                     <connections>
                         <outlet property="cameraIcon" destination="Me9-2t-YOZ" id="9Mi-Nb-fhw"/>
+                        <outlet property="editButton" destination="tU7-eV-usU" id="i8r-av-acc"/>
                         <outlet property="userPlaceholder" destination="9HY-Ia-dPF" id="CnR-dG-PfU"/>
                     </connections>
                 </viewController>
@@ -59,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CameraIcon" width="128" height="128"/>
         <image name="UserPlaceholder" width="300" height="300"/>
     </resources>
 </document>
