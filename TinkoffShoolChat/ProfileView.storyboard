@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qVT-Rw-Vvv">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="i19-Am-CKn">
+            <objects>
+                <viewController id="qVT-Rw-Vvv" customClass="ProfileViewController" customModule="TinkoffShoolChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oFv-nA-Pbt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-Ia-dPF">
+                                <rect key="frame" x="20" y="64" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9HY-Ia-dPF" secondAttribute="height" multiplier="1:1" id="A5m-3c-AFA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex Zverev" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5om-1a-VLE" userLabel="UserName">
+                                <rect key="frame" x="20" y="415" width="335" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-2t-YOZ">
+                                <rect key="frame" x="271.66666666666669" y="315.66666666666669" width="83.333333333333314" height="83.333333333333314"/>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.47058823529411764" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Me9-2t-YOZ" secondAttribute="height" multiplier="1:1" id="2eB-fR-Nhp"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="CameraIcon"/>
+                                <connections>
+                                    <action selector="touchUpCameraIcon:" destination="qVT-Rw-Vvv" eventType="touchUpInside" id="mxl-Ez-iPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-eV-usU">
+                                <rect key="frame" x="20" y="703" width="335" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="f1F-SF-vGZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Редактировать">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Love ❤️ iOS Developent, like butterflies and live in Tinkoff Bank" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7B-2m-4oB">
+                                <rect key="frame" x="20" y="460" width="335" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Me9-2t-YOZ" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" id="05N-5e-rTH"/>
+                            <constraint firstItem="5om-1a-VLE" firstAttribute="leading" secondItem="9HY-Ia-dPF" secondAttribute="leading" id="0r9-iZ-hEq"/>
+                            <constraint firstItem="tU7-eV-usU" firstAttribute="leading" secondItem="9wB-FN-yP3" secondAttribute="leading" constant="20" id="3jM-H0-8qb"/>
+                            <constraint firstItem="Z7B-2m-4oB" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" id="9cS-pA-8rH"/>
+                            <constraint firstItem="Me9-2t-YOZ" firstAttribute="bottom" secondItem="9HY-Ia-dPF" secondAttribute="bottom" id="9xz-qb-Xw7"/>
+                            <constraint firstItem="9HY-Ia-dPF" firstAttribute="leading" secondItem="9wB-FN-yP3" secondAttribute="leading" constant="20" id="EEy-om-Oy6"/>
+                            <constraint firstItem="5om-1a-VLE" firstAttribute="top" secondItem="9HY-Ia-dPF" secondAttribute="bottom" constant="16" id="G32-oH-Lcr"/>
+                            <constraint firstItem="9HY-Ia-dPF" firstAttribute="top" secondItem="9wB-FN-yP3" secondAttribute="top" constant="20" id="I0O-oi-iKl"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="trailing" secondItem="tU7-eV-usU" secondAttribute="trailing" constant="20" id="cNg-ZM-GAE"/>
+                            <constraint firstItem="Me9-2t-YOZ" firstAttribute="width" secondItem="9HY-Ia-dPF" secondAttribute="width" multiplier="0.25" id="eUj-VA-8Yq"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="bottom" secondItem="tU7-eV-usU" secondAttribute="bottom" constant="20" id="iB0-sO-kZo"/>
+                            <constraint firstItem="9wB-FN-yP3" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" constant="20" id="k5l-9E-mRM"/>
+                            <constraint firstItem="5om-1a-VLE" firstAttribute="trailing" secondItem="9HY-Ia-dPF" secondAttribute="trailing" id="m85-mm-4dk"/>
+                            <constraint firstItem="Z7B-2m-4oB" firstAttribute="leading" secondItem="9HY-Ia-dPF" secondAttribute="leading" id="pya-8o-9Fk"/>
+                            <constraint firstItem="Z7B-2m-4oB" firstAttribute="top" secondItem="5om-1a-VLE" secondAttribute="bottom" constant="16" id="vGu-VP-yHL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9wB-FN-yP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraIcon" destination="Me9-2t-YOZ" id="9Mi-Nb-fhw"/>
+                        <outlet property="editButton" destination="tU7-eV-usU" id="i8r-av-acc"/>
+                        <outlet property="userPlaceholder" destination="9HY-Ia-dPF" id="CnR-dG-PfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTr-NE-Az7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35.625" y="152.11267605633802"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraIcon" width="128" height="128"/>
+        <image name="UserPlaceholder" width="300" height="300"/>
+    </resources>
+</document>

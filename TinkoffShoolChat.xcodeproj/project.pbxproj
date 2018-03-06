@@ -13,6 +13,8 @@
 		AA2D8BE1204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA2D8BDF204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld */; };
 		AA2D8BE3204225F900DE9A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2D8BE2204225F900DE9A03 /* Assets.xcassets */; };
 		AA2D8BE6204225F900DE9A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2D8BE4204225F900DE9A03 /* LaunchScreen.storyboard */; };
+		AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB6674204DE98D00174C01 /* ProfileViewController.swift */; };
+		AACB6677204DEA7F00174C01 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB6676204DEA7F00174C01 /* ProfileView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AA2D8BE2204225F900DE9A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA2D8BE5204225F900DE9A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA2D8BE7204225F900DE9A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AACB6674204DE98D00174C01 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AACB6676204DEA7F00174C01 /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AA2D8BE4204225F900DE9A03 /* LaunchScreen.storyboard */,
 				AA2D8BE7204225F900DE9A03 /* Info.plist */,
 				AA2D8BDF204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld */,
+				AACB6674204DE98D00174C01 /* ProfileViewController.swift */,
+				AACB6676204DEA7F00174C01 /* ProfileView.storyboard */,
 			);
 			path = TinkoffShoolChat;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2D8BE6204225F900DE9A03 /* LaunchScreen.storyboard in Resources */,
+				AACB6677204DEA7F00174C01 /* ProfileView.storyboard in Resources */,
 				AA2D8BE3204225F900DE9A03 /* Assets.xcassets in Resources */,
 				AA2D8BDE204225F900DE9A03 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 			files = (
 				AA2D8BE1204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld in Sources */,
 				AA2D8BDB204225F900DE9A03 /* ViewController.swift in Sources */,
+				AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */,
 				AA2D8BD9204225F900DE9A03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
