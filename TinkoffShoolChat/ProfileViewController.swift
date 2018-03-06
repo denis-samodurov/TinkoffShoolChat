@@ -15,19 +15,25 @@ class ProfileViewController: UIViewController {
     
     private var cornerSize: CGFloat = 0.0;
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        // ERROR print("EditButton Frame in init: \(editButton.frame)")
+        // IBOutlet инициализируются не во время вызова init, поэтому editButton здесь nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         cornerSize = cameraIcon.frame.size.height / 2;
-        print(cornerSize)
         setRadius(view: userPlaceholder);
         setRadius(view: cameraIcon);
         
+        print("EditButton Frame in viewDidLoad: \(editButton.frame)")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        //  Frame меняется, потому что autolayout не изменяет размер view моментально, он срабатывает по тригеру и мы не можем управлять когда произойдём пересчёт размеров
+        print("EditButton Frame in viewDidAppear: \(editButton.frame)")
     }
     
     private func setRadius(view: UIView){
