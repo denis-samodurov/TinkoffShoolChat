@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPz-c3-peS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c88-G9-v7A">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Conversations List Controller-->
+        <!--Tinkoff Chat-->
         <scene sceneID="YxM-VP-JTJ">
             <objects>
                 <viewController id="ZPz-c3-peS" customClass="ConversationsListController" customModule="TinkoffShoolChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,10 +20,47 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0DR-Dd-SAi"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Tinkoff Chat" id="lTE-vD-FdH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Profile" id="yiZ-CW-1no">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="180-Wr-cYD" kind="presentation" id="57c-IW-Fki"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm5-PL-JfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-111" y="156"/>
+            <point key="canvasLocation" x="228" y="155.17241379310346"/>
+        </scene>
+        <!--ProfileView-->
+        <scene sceneID="JeW-n6-aNy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileView" id="180-Wr-cYD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x05-O6-htl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K1o-DO-pZI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c88-G9-v7A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hF8-5b-WH7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZPz-c3-peS" kind="relationship" relationship="rootViewController" id="zVM-rn-BnE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnY-zk-MwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Profile" width="20" height="20"/>
+    </resources>
 </document>
