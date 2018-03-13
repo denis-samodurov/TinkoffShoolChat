@@ -27,13 +27,15 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         print("EditButton Frame in viewDidLoad: \(editButton.frame)")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //  Frame меняется, потому что autolayout не изменяет размер view моментально, он срабатывает по тригеру и мы не можем управлять когда произойдём пересчёт размеров
-        print("EditButton Frame in viewDidAppear: \(editButton.frame)")
-        
+    override func viewWillAppear(_ animated: Bool) {
         cornerSize = cameraIcon.frame.size.height / 2;
         setRadius(view: userPlaceholder);
         setRadius(view: cameraIcon);
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //  Frame меняется, потому что autolayout не изменяет размер view моментально, он срабатывает по тригеру и мы не можем управлять когда произойдём пересчёт размеров
+        print("EditButton Frame in viewDidAppear: \(editButton.frame)")
     }
     
     private func setRadius(view: UIView){
@@ -58,12 +60,16 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         self.present(alertController, animated: true) { }
     }
     
+    @IBAction func returnToPreviousScreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func getImageFromExternalSource(sourceType: UIImagePickerControllerSourceType){
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Button capture")
             
             imagePicker.delegate = self
-            imagePicker.sourceType = sourceType;
+            imagePicker.sourceType = sourceType
             imagePicker.allowsEditing = false
             
             self.present(imagePicker, animated: true, completion: nil)
