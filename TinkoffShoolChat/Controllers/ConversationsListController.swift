@@ -8,14 +8,83 @@
 
 import UIKit
 
-class ConversationsListController: UIViewController {
+class ConversationsListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var conversationTable: UITableView!
+    
+    var conversationOnline = [Conversation]()
+    var conversationOffline = [Conversation]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.conversationTable.dataSource = self
+        self.conversationTable.delegate = self
+
+        self.conversationTable.rowHeight =  UITableViewAutomaticDimension
+        self.conversationTable.estimatedRowHeight = 50.0;
+        
+        self.conversationTable.register(UINib(nibName: "ConversationPreviewView", bundle: nil), forCellReuseIdentifier: "ConversationPreviewView")
+        self.conversationTable.tableFooterView = UIView(frame: .zero)
+        
+        loadConservations()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadConservations(){
+        let conversationData: ConversationDataProtocol = ConversationDataTest()
+        let conservationList = conversationData.getConversationList()
+        for conservation in conservationList {
+            if conservation.online {
+                conversationOnline.append(conservation)
+            } else {
+                conversationOffline.append(conservation)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectionIndexPath = self.conversationTable.indexPathForSelectedRow {
+            self.conversationTable.deselectRow(at: selectionIndexPath, animated: animated)
+        }
+    }
+    
+    // MARK: - UITableViewDataSource data source
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (section == 0) {
+            return conversationOnline.count
+        } else {
+            return conversationOffline.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = "ConversationCeil"
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ConversationPreviewCell
+    
+        let currentConversation : Conversation;
+        
+        if (indexPath.section == 0) {
+            currentConversation =  conversationOnline[indexPath.row]
+        } else {
+            currentConversation =  conversationOffline[indexPath.row]
+        }
+        
+        cell.bindCell(currentConversation)
+        
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate delegate
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Online"
+        } else {
+            return "History"
+        }
     }
 }

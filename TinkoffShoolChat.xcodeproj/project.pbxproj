@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		AA0AF03B2057363E009CDC32 /* ConversationsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0AF03A2057363E009CDC32 /* ConversationsList.storyboard */; };
 		AA0AF03D20573670009CDC32 /* ConversationsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF03C20573670009CDC32 /* ConversationsListController.swift */; };
+		AA0AF0452057596B009CDC32 /* ConversationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF0442057596B009CDC32 /* ConversationPreviewView.swift */; };
+		AA0AF0472057DCFB009CDC32 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF0462057DCFB009CDC32 /* Conversation.swift */; };
+		AA0AF0492057DDA7009CDC32 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF0482057DDA7009CDC32 /* Message.swift */; };
+		AA0AF04E2057E533009CDC32 /* ConversationDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF04D2057E533009CDC32 /* ConversationDataTest.swift */; };
+		AA0AF0502057E558009CDC32 /* ConversationDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF04F2057E558009CDC32 /* ConversationDataProtocol.swift */; };
+		AA0AF054205863FC009CDC32 /* ConversationPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF053205863FC009CDC32 /* ConversationPreviewCell.swift */; };
+		AA0AF05820586CEC009CDC32 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0AF05720586CEC009CDC32 /* ConversationController.swift */; };
 		AA2D8BD9204225F900DE9A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D8BD8204225F900DE9A03 /* AppDelegate.swift */; };
 		AA2D8BDB204225F900DE9A03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D8BDA204225F900DE9A03 /* ViewController.swift */; };
 		AA2D8BDE204225F900DE9A03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2D8BDC204225F900DE9A03 /* Main.storyboard */; };
@@ -22,6 +29,14 @@
 /* Begin PBXFileReference section */
 		AA0AF03A2057363E009CDC32 /* ConversationsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ConversationsList.storyboard; path = TinkoffShoolChat/UI/ConversationsList.storyboard; sourceTree = SOURCE_ROOT; };
 		AA0AF03C20573670009CDC32 /* ConversationsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListController.swift; sourceTree = "<group>"; };
+		AA0AF0442057596B009CDC32 /* ConversationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversationPreviewView.swift; path = TinkoffShoolChat/View/xib/ConversationPreviewView.swift; sourceTree = SOURCE_ROOT; };
+		AA0AF0462057DCFB009CDC32 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		AA0AF0482057DDA7009CDC32 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AA0AF04D2057E533009CDC32 /* ConversationDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDataTest.swift; sourceTree = "<group>"; };
+		AA0AF04F2057E558009CDC32 /* ConversationDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDataProtocol.swift; sourceTree = "<group>"; };
+		AA0AF052205863E4009CDC32 /* ConversationPreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationPreviewView.xib; sourceTree = "<group>"; };
+		AA0AF053205863FC009CDC32 /* ConversationPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPreviewCell.swift; sourceTree = "<group>"; };
+		AA0AF05720586CEC009CDC32 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		AA2D8BD5204225F900DE9A03 /* TinkoffShoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffShoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2D8BD8204225F900DE9A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA2D8BDA204225F900DE9A03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +66,7 @@
 				AA2D8BDA204225F900DE9A03 /* ViewController.swift */,
 				AACB6674204DE98D00174C01 /* ProfileViewController.swift */,
 				AA0AF03C20573670009CDC32 /* ConversationsListController.swift */,
+				AA0AF05720586CEC009CDC32 /* ConversationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -58,6 +74,8 @@
 		AA0AF037205733DF009CDC32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AA0AF0462057DCFB009CDC32 /* Conversation.swift */,
+				AA0AF0482057DDA7009CDC32 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -65,6 +83,8 @@
 		AA0AF038205733EC009CDC32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA0AF051205863DD009CDC32 /* xib */,
+				AA0AF053205863FC009CDC32 /* ConversationPreviewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -78,6 +98,24 @@
 				AACB6676204DEA7F00174C01 /* ProfileView.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AA0AF04C2057E4F7009CDC32 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				AA0AF04D2057E533009CDC32 /* ConversationDataTest.swift */,
+				AA0AF04F2057E558009CDC32 /* ConversationDataProtocol.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		AA0AF051205863DD009CDC32 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				AA0AF052205863E4009CDC32 /* ConversationPreviewView.xib */,
+				AA0AF0442057596B009CDC32 /* ConversationPreviewView.swift */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 		AA2D8BCC204225F900DE9A03 = {
@@ -102,6 +140,7 @@
 				AA2D8BD8204225F900DE9A03 /* AppDelegate.swift */,
 				AA2D8BDF204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld */,
 				AA2D8BE7204225F900DE9A03 /* Info.plist */,
+				AA0AF04C2057E4F7009CDC32 /* Storage */,
 				AA0AF038205733EC009CDC32 /* View */,
 				AA0AF037205733DF009CDC32 /* Models */,
 				AA0AF035205733AD009CDC32 /* Controllers */,
@@ -185,10 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0AF0452057596B009CDC32 /* ConversationPreviewView.swift in Sources */,
+				AA0AF0502057E558009CDC32 /* ConversationDataProtocol.swift in Sources */,
 				AA2D8BE1204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld in Sources */,
 				AA2D8BDB204225F900DE9A03 /* ViewController.swift in Sources */,
 				AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */,
+				AA0AF0472057DCFB009CDC32 /* Conversation.swift in Sources */,
+				AA0AF0492057DDA7009CDC32 /* Message.swift in Sources */,
+				AA0AF05820586CEC009CDC32 /* ConversationController.swift in Sources */,
 				AA0AF03D20573670009CDC32 /* ConversationsListController.swift in Sources */,
+				AA0AF054205863FC009CDC32 /* ConversationPreviewCell.swift in Sources */,
+				AA0AF04E2057E533009CDC32 /* ConversationDataTest.swift in Sources */,
 				AA2D8BD9204225F900DE9A03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
