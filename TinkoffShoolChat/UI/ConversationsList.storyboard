@@ -90,6 +90,11 @@
                         <viewLayoutGuide key="safeArea" id="0DR-Dd-SAi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tinkoff Chat" id="lTE-vD-FdH">
+                        <barButtonItem key="leftBarButtonItem" title="Темы" id="K3P-FM-4KS">
+                            <connections>
+                                <segue destination="lSn-gk-vSn" kind="presentation" id="xbj-vn-vdA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Profile" id="yiZ-CW-1no">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -111,7 +116,7 @@
                 <viewControllerPlaceholder storyboardName="ProfileView" id="180-Wr-cYD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x05-O6-htl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="-172"/>
+            <point key="canvasLocation" x="1060" y="-88"/>
         </scene>
         <!--Conversation Controller-->
         <scene sceneID="Gc0-ea-NPx">
@@ -127,6 +132,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vL-hT-92U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1399" y="318"/>
+        </scene>
+        <!--Themes-->
+        <scene sceneID="bNz-wa-6oX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Themes" id="lSn-gk-vSn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJn-DI-M3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="-352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K1o-DO-pZI">

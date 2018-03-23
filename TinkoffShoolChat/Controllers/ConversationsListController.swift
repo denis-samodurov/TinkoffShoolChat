@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationsListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConversationsListController: UIViewController, UITableViewDelegate, UITableViewDataSource, ThemesViewControllerDelegate {
     @IBOutlet weak var conversationTable: UITableView!
     
     var conversationOnline = [Conversation]()
@@ -85,6 +85,26 @@ class ConversationsListController: UIViewController, UITableViewDelegate, UITabl
             return "Online"
         } else {
             return "History"
+        }
+    }
+    
+    // MARK: - ThemesViewControllerDelegate
+    
+    @objc func themesViewController(_ controller: ThemesViewController!, didSelectTheme selectedTheme: UIColor!) {
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+    
+    func logThemeChanging(selectedTheme: UIColor) {
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.barTintColor = selectedTheme
+        
+        print(#function, selectedTheme)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigation =  segue.destination as? UINavigationController,
+            let themesViewController =  navigation.topViewController as? ThemesViewController {
+            themesViewController.delegate = self
         }
     }
 }
