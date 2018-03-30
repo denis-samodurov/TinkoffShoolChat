@@ -25,6 +25,11 @@
 		AA2FD4E72064D06A00791063 /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2FD4E62064D06A00791063 /* ThemesViewController.m */; };
 		AA2FD4E92064D34900791063 /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2FD4E82064D34900791063 /* Themes.m */; };
 		AA2FD4EB2065618000791063 /* Themes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2FD4EA2065618000791063 /* Themes.storyboard */; };
+		AA7557B0206EAD3600E2FE89 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7557AF206EAD3600E2FE89 /* UserProfile.swift */; };
+		AA7557B2206EB04000E2FE89 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7557B1206EB04000E2FE89 /* DataManager.swift */; };
+		AA7557B5206EB17300E2FE89 /* GCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7557B4206EB17300E2FE89 /* GCDDataManager.swift */; };
+		AA7557B7206EC50000E2FE89 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7557B6206EC50000E2FE89 /* FileHandler.swift */; };
+		AA7557B9206EDA6E00E2FE89 /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7557B8206EDA6E00E2FE89 /* OperationDataManager.swift */; };
 		AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB6674204DE98D00174C01 /* ProfileViewController.swift */; };
 		AACB6677204DEA7F00174C01 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB6676204DEA7F00174C01 /* ProfileView.storyboard */; };
 /* End PBXBuildFile section */
@@ -55,6 +60,11 @@
 		AA2FD4E62064D06A00791063 /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
 		AA2FD4E82064D34900791063 /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
 		AA2FD4EA2065618000791063 /* Themes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Themes.storyboard; sourceTree = "<group>"; };
+		AA7557AF206EAD3600E2FE89 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		AA7557B1206EB04000E2FE89 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AA7557B4206EB17300E2FE89 /* GCDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDDataManager.swift; sourceTree = "<group>"; };
+		AA7557B6206EC50000E2FE89 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		AA7557B8206EDA6E00E2FE89 /* OperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
 		AACB6674204DE98D00174C01 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AACB6676204DEA7F00174C01 /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +99,7 @@
 				AA2FD4E82064D34900791063 /* Themes.m */,
 				AA0AF0462057DCFB009CDC32 /* Conversation.swift */,
 				AA0AF0482057DDA7009CDC32 /* Message.swift */,
+				AA7557AF206EAD3600E2FE89 /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 		AA0AF04C2057E4F7009CDC32 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				AA7557B3206EB15000E2FE89 /* DataManager */,
 				AA0AF04D2057E533009CDC32 /* ConversationDataTest.swift */,
 				AA0AF04F2057E558009CDC32 /* ConversationDataProtocol.swift */,
 			);
@@ -173,6 +185,17 @@
 				AA2FD4E62064D06A00791063 /* ThemesViewController.m */,
 			);
 			path = ThemesController;
+			sourceTree = "<group>";
+		};
+		AA7557B3206EB15000E2FE89 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				AA7557B1206EB04000E2FE89 /* DataManager.swift */,
+				AA7557B4206EB17300E2FE89 /* GCDDataManager.swift */,
+				AA7557B6206EC50000E2FE89 /* FileHandler.swift */,
+				AA7557B8206EDA6E00E2FE89 /* OperationDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,15 +275,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0AF0452057596B009CDC32 /* ConversationPreviewView.swift in Sources */,
+				AA7557B2206EB04000E2FE89 /* DataManager.swift in Sources */,
 				AA0AF0502057E558009CDC32 /* ConversationDataProtocol.swift in Sources */,
+				AA7557B0206EAD3600E2FE89 /* UserProfile.swift in Sources */,
 				AA2D8BE1204225F900DE9A03 /* TinkoffShoolChat.xcdatamodeld in Sources */,
+				AA7557B5206EB17300E2FE89 /* GCDDataManager.swift in Sources */,
 				AA2D8BDB204225F900DE9A03 /* ViewController.swift in Sources */,
 				AACB6675204DE98D00174C01 /* ProfileViewController.swift in Sources */,
 				AA2FD4E92064D34900791063 /* Themes.m in Sources */,
 				AA0AF0472057DCFB009CDC32 /* Conversation.swift in Sources */,
 				AA0AF0492057DDA7009CDC32 /* Message.swift in Sources */,
 				AA0AF05820586CEC009CDC32 /* ConversationController.swift in Sources */,
+				AA7557B7206EC50000E2FE89 /* FileHandler.swift in Sources */,
 				AA0AF03D20573670009CDC32 /* ConversationsListController.swift in Sources */,
+				AA7557B9206EDA6E00E2FE89 /* OperationDataManager.swift in Sources */,
 				AA0AF054205863FC009CDC32 /* ConversationPreviewCell.swift in Sources */,
 				AA0AF04E2057E533009CDC32 /* ConversationDataTest.swift in Sources */,
 				AA2D8BD9204225F900DE9A03 /* AppDelegate.swift in Sources */,

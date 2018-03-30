@@ -12,8 +12,14 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var userPlaceholder: UIImageView!
     @IBOutlet weak var cameraIcon: UIButton!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet var userNickText: UITextField!
+    @IBOutlet var aboutUserText: UITextField!
+    @IBOutlet var gcdButton: UIButton!
+    @IBOutlet var operationButton: UIButton!
     
     private var cornerSize: CGFloat = 0.0;
+    private var dataManager: DataManager = GCDDataManager();
+    
     var imagePicker = UIImagePickerController()
     
     required init(coder aDecoder: NSCoder) {
@@ -31,6 +37,7 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
         cornerSize = cameraIcon.frame.size.height / 2;
         setRadius(view: userPlaceholder);
         setRadius(view: cameraIcon);
+        setEditMode(isActive: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +70,9 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
     @IBAction func returnToPreviousScreen(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func editUserProfile(_ sender: UIButton) {
+        setEditMode(isActive: true)
+    }
     
     func getImageFromExternalSource(sourceType: UIImagePickerControllerSourceType){
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -74,6 +84,59 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, U
             
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    private func setEditMode(isActive: Bool){
+        userNickText.isEnabled = isActive
+        aboutUserText.isEnabled = isActive
+    }
+    @IBAction func saveUserProfileByGCD(_ sender: Any) {
+        dataManager = GCDDataManager()
+        saveUserProfile()
+                                                   
+    }
+    @IBAction func saveUserProfileByOperation(_ sender: Any) {
+        dataManager = OperationDataManager()
+        saveUserProfile()
+    }
+    
+    func saveUserProfile(){
+        let userProfile: UserProfile =
+            UserProfile(nick: userNickText.text, aboutUser: aboutUserText.text, avatarImage: userPlaceholder.image)
+        
+        dataManager.saveData(userProfile: userProfile, response: {(response) in
+            if response == SaveStatus.Success {
+                self.showErrorAlert(savingFunc: self.saveUserProfile)
+            }
+            else {
+                self.showSuccessAlert()
+            }
+        })
+    }
+    
+    func showSuccessAlert() {
+        let successAlert = UIAlertController(title: "Данные сохранены", message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        successAlert.addAction(okAction)
+        
+        present(successAlert, animated: true, completion: nil)
+    }
+    
+    func showErrorAlert(savingFunc: @escaping () -> ()) {
+        let errorAlert = UIAlertController(title: "Ошибка", message: "Не удалось сохранить данные", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        let repeatAction = UIAlertAction(title: "Повторить", style: .destructive) {
+            (alert: UIAlertAction!) -> Void in
+            savingFunc()
+        }
+        
+        errorAlert.addAction(okAction)
+        errorAlert.addAction(repeatAction)
+        
+        present(errorAlert, animated: true, completion: nil)
     }
     
     // MARK: - UIImagePickerControllerDelegate implementation
